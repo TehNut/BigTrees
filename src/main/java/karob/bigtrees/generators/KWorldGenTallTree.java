@@ -149,7 +149,7 @@ public class KWorldGenTallTree extends AbstractWorldGenerator implements ITreeCo
 				zz = this.getBlock(i, j - jj, k);
 				if (!zz.isAir() && 
 						!zz.areEqual(wood, leaf) && 
-						!zz.areEqual(Blocks.grass, Blocks.dirt, Blocks.flowing_water, Blocks.water, Blocks.sand, Blocks.gravel)){
+						!zz.areEqual(Blocks.GRASS, Blocks.DIRT, Blocks.FLOWING_WATER, Blocks.WATER, Blocks.SAND, Blocks.GRAVEL)){
 					break;
 				} else {
 					this.setBlockAndMetadata(i, j - jj, k, wood);

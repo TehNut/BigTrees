@@ -57,7 +57,7 @@ public class KTreeDecorate {
 				 * This should stop trees in desert edges and such.
 				 */
 				BiomeGenBase currentBiome = world.getBiomeGenForCoords(treePosition);
-				if (currentBiome.biomeID != biome.biomeID) {
+				if (!currentBiome.getRegistryName().equals(biome.getRegistryName())) {
 					continue;
 				}
 				

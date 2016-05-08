@@ -13,6 +13,7 @@ import karob.bigtrees.config.BiomeConfiguration.Match;
 import karob.bigtrees.config.Population;
 import karob.bigtrees.config.TreeConfiguration;
 import karob.bigtrees.config.defaults.Defaults;
+import net.minecraft.init.Biomes;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
@@ -183,7 +184,7 @@ public class KTreeCfgBiomes {
 		addCategory("deserts", biomes(Type.SANDY, Type.WASTELAND, Type.MESA), biomes(Type.HILLS, Type.MOUNTAIN), defaultSandyDensities, mainParent);
 		addCategory("snowy", biomes(Type.SNOWY), noExcludes(), defaultSnowyDensities, mainParent);
 		addCategory("jungles", biomes(Type.JUNGLE), noExcludes(), defaultJungleDensities, mainParent);
-		addBiomeOverride("birchForests", biomes(BiomeGenBase.birchForest, BiomeGenBase.birchForestHills), overriddenBirchForestDensities, mainParent);
+		addBiomeOverride("birchForests", biomes(Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS), overriddenBirchForestDensities, mainParent);
 		
 		
 		
@@ -233,7 +234,7 @@ public class KTreeCfgBiomes {
 	private static String[] biomes(BiomeGenBase ... biomes) {
 		List<String> strings = new LinkedList<String>();
 		for(BiomeGenBase biome : biomes) {
-			strings.add(biome.biomeName);
+			strings.add(biome.getBiomeName());
 		}
 		
 		return strings.toArray(new String[strings.size()]);

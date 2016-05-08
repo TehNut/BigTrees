@@ -14,8 +14,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.common.registry.LanguageRegistry;
-//import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = Constants.ModId, name = Constants.ModName, version = Constants.ModVersion)
 public class BigTrees {
@@ -82,7 +80,7 @@ public class BigTrees {
 	// moved most of decoration to a new file
 	@SubscribeEvent
 	public boolean decorate(DecorateBiomeEvent.Decorate evt) {
-		if (evt.type == DecorateBiomeEvent.Decorate.EventType.TREE) {
+		if (evt.getType() == DecorateBiomeEvent.Decorate.EventType.TREE) {
 			evt.setResult(Result.DENY);
 			return true;
 		}
@@ -91,18 +89,15 @@ public class BigTrees {
 	}
 	
 	private BlockPos getBlockPos(DecorateBiomeEvent evt) {
-		return new BlockPos(evt.pos);
+		return new BlockPos(evt.getPos());
 	}
 	
 	public static void registerBlock(Block b, String name) {
-		GameRegistry.registerBlock(b, b.getUnlocalizedName());
-		LanguageRegistry.addName(b, name);
+		GameRegistry.register(b.setRegistryName(b.getUnlocalizedName()));
 	}
 
-	public static void registerBlock(Block block,
-			Class<? extends ItemBlock> itemBlockClass) {
-		GameRegistry.registerBlock(block, itemBlockClass, block
-				.getUnlocalizedName().replace("tile.", ""));
+	public static void registerBlock(Block block, Class<? extends ItemBlock> itemBlockClass) {
+		GameRegistry.registerBlock(block, itemBlockClass, block.getUnlocalizedName().replace("tile.", ""));
 	}
 
 }

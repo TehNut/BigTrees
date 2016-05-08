@@ -11,10 +11,10 @@ public class BigPineDefaults extends TreeConfiguration {
 		name = "Big Pine";
 		minHeight = 18;
 		maxHeight = 22;
-		wood = new BlockAndMeta(Blocks.log, 1);
-		leaf = new BlockAndMeta(Blocks.leaves, 1);
-		baseBlocks.add(new BlockAndMeta(Blocks.gravel));
-		baseBlocks.add(new BlockAndMeta(Blocks.dirt, 2));
+		wood = new BlockAndMeta(Blocks.LOG, 1);
+		leaf = new BlockAndMeta(Blocks.LEAVES, 1);
+		baseBlocks.add(new BlockAndMeta(Blocks.GRAVEL));
+		baseBlocks.add(new BlockAndMeta(Blocks.DIRT, 2));
 		minNoiseValue = 60;
 		maxNoiseValue = 80;
 	}

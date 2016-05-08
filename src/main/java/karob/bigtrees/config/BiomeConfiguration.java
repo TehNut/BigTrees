@@ -99,7 +99,7 @@ public class BiomeConfiguration {
 	}
 
 	private boolean hasBiomeSpecificOverride(BiomeGenBase biome) {
-		return specificBiomes.contains(biome.biomeName.toLowerCase());
+		return specificBiomes.contains(biome.getBiomeName().toLowerCase());
 	}
 	
 	private boolean existsInSet(Set<BiomeDictionary.Type> toSearch, BiomeDictionary.Type[] toMatch) {

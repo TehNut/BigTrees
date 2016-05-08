@@ -184,34 +184,34 @@ public class KWorldGenHatTree extends AbstractWorldGenerator implements ITreeCon
         }
 */
         for(int n = 0; n < l - 1; n ++){
-          this.setBlockAndMetadata(i,   j+n, k,   new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+1, j+n, k,   new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+1, j+n, k+1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i,   j+n, k+1, new BlockAndMeta(Blocks.air));
+          this.setBlockAndMetadata(i,   j+n, k,   new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+1, j+n, k,   new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+1, j+n, k+1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i,   j+n, k+1, new BlockAndMeta(Blocks.AIR));
         }
       if(hatBase >= 5){
         for(int n = 0; n < l - 2; n ++){
-          this.setBlockAndMetadata(i-1, j+n, k+1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-1, j+n, k,   new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-1, j+n, k-1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i  , j+n, k-1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+1, j+n, k-1, new BlockAndMeta(Blocks.air));
+          this.setBlockAndMetadata(i-1, j+n, k+1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-1, j+n, k,   new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-1, j+n, k-1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i  , j+n, k-1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+1, j+n, k-1, new BlockAndMeta(Blocks.AIR));
         }
       }
       if(hatBase == 7){
         for(int n = 0; n < l - 3; n ++){
-          this.setBlockAndMetadata(i-2, j+n, k-1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-2, j+n, k,   new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-2, j+n, k+1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+2, j+n, k-1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+2, j+n, k,   new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+2, j+n, k+1, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-1, j+n, k-2, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i,   j+n, k-2, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+1, j+n, k-2, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i-1, j+n, k+2, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i,   j+n, k+2, new BlockAndMeta(Blocks.air));
-          this.setBlockAndMetadata(i+1, j+n, k+2, new BlockAndMeta(Blocks.air));
+          this.setBlockAndMetadata(i-2, j+n, k-1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-2, j+n, k,   new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-2, j+n, k+1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+2, j+n, k-1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+2, j+n, k,   new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+2, j+n, k+1, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-1, j+n, k-2, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i,   j+n, k-2, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+1, j+n, k-2, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i-1, j+n, k+2, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i,   j+n, k+2, new BlockAndMeta(Blocks.AIR));
+          this.setBlockAndMetadata(i+1, j+n, k+2, new BlockAndMeta(Blocks.AIR));
         }
       }
 //world.lightUpdates = true;
@@ -329,7 +329,7 @@ public class KWorldGenHatTree extends AbstractWorldGenerator implements ITreeCon
 //        if(this.getBlock(i, j-n, k+1) == Blocks.fence) return;
 //        if(this.getBlock(i, j-n, k-1) == Blocks.fence) return;
 //        id = this.getBlock(i, j-n, k);
-//        if(id == Blocks.air || id == Blocks.tallgrass || id == Blocks.yellow_flower || id == Blocks.red_flower || id == Blocks.brown_mushroom || id == Blocks.red_mushroom || id == hatLeafBlock || id == hatWoodBlock)
+//        if(id == Blocks.AIR || id == Blocks.tallgrass || id == Blocks.yellow_flower || id == Blocks.red_flower || id == Blocks.brown_mushroom || id == Blocks.red_mushroom || id == hatLeafBlock || id == hatWoodBlock)
 //          n ++;
 //        else if(id == Blocks.grass || id == Blocks.dirt || id == Blocks.stone || id == Blocks.sand || id == Blocks.gravel)
 //          break;
@@ -338,7 +338,7 @@ public class KWorldGenHatTree extends AbstractWorldGenerator implements ITreeCon
 //      }
 //      for(int q = 1; q <= n; q ++){
 //        id = this.getBlock(i, j-q, k);
-//        if(id == Blocks.air || id == Blocks.tallgrass || id == Blocks.yellow_flower || id == Blocks.red_flower || id == Blocks.brown_mushroom || id == Blocks.red_mushroom)
+//        if(id == Blocks.AIR || id == Blocks.tallgrass || id == Blocks.yellow_flower || id == Blocks.red_flower || id == Blocks.brown_mushroom || id == Blocks.red_mushroom)
 //          this.setBlockAndMetadata(i, j-q, k, Blocks.fence, 0);
 //      }
 //    }
@@ -449,10 +449,10 @@ if(size == 0){
           id = this.getBlock(i+ii, j, k+kk);
         }
         if(!id.isAir()) return;
-        this.setBlockAndMetadataWithNotify(i, j, k, new BlockAndMeta(Blocks.vine, l));
+        this.setBlockAndMetadataWithNotify(i, j, k, new BlockAndMeta(Blocks.VINE, l));
         for(int i1 = 20; this.getBlock(i, --j, k).isAir() && i1 > 0; i1--)
         {
-            this.setBlockAndMetadataWithNotify(i, j, k, new BlockAndMeta(Blocks.vine, l));
+            this.setBlockAndMetadataWithNotify(i, j, k, new BlockAndMeta(Blocks.VINE, l));
         }
 
     }

@@ -79,7 +79,7 @@ public abstract class AbstractWorldGenerator extends WorldGenerator implements I
 			return worldObject.getBlock(pos);
 		} catch (RuntimeException e) {
 //			FMLLog.getLogger().error(new FormattedMessage("getBlock(%s, %s, %s)", new Object[]{ x, y, z }));
-			return new BlockAndMeta(new Block(Material.barrier));
+			return new BlockAndMeta(new Block(Material.BARRIER));
 		}
 	}
 	
@@ -109,8 +109,8 @@ public abstract class AbstractWorldGenerator extends WorldGenerator implements I
 	
 	protected int getMedium(int i, int j, int k){
         //Roots can grow through the following block types.
-        Block canGrowOpen[] = {Blocks.air, Blocks.sapling, Blocks.flowing_water, Blocks.water, Blocks.flowing_lava, Blocks.lava, Blocks.log, Blocks.log2, Blocks.leaves, Blocks.leaves2};//more to be re-added
-        Block canGrowSolid[] = {Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel}; //more to be re-added
+        Block canGrowOpen[] = {Blocks.AIR, Blocks.SAPLING, Blocks.FLOWING_WATER, Blocks.WATER, Blocks.FLOWING_LAVA, Blocks.LAVA, Blocks.LOG, Blocks.LOG2, Blocks.LEAVES, Blocks.LEAVES2};//more to be re-added
+        Block canGrowSolid[] = {Blocks.GRASS, Blocks.DIRT, Blocks.SAND, Blocks.GRAVEL}; //more to be re-added
         BlockPos pos = new BlockPos(i, j, k);
         BlockAndMeta qq = this.getBlock(pos);
         int medium = 0;
@@ -418,7 +418,7 @@ public abstract class AbstractWorldGenerator extends WorldGenerator implements I
     }
     
     @Override
-	public boolean generate(World worldIn, Random rand,	net.minecraft.util.BlockPos position) {
+	public boolean generate(World worldIn, Random rand,	net.minecraft.util.math.BlockPos position) {
 		return generate(new WorldWrapper(worldIn), rand, new BlockPos(position));
 	}
     

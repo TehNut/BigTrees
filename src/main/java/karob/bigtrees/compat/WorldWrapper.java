@@ -18,7 +18,7 @@ public class WorldWrapper {
 	}
 	
 	public int getDimensionId() {
-		return world.provider.getDimensionId();
+		return world.provider.getDimensionType().getId();
 	}
 	
 	public long getSeed() {

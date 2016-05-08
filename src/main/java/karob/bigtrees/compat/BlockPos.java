@@ -14,7 +14,7 @@ public class BlockPos {
 		this.z = z;
 	}
 	
-	public BlockPos(net.minecraft.util.BlockPos pos) {
+	public BlockPos(net.minecraft.util.math.BlockPos pos) {
 		this(pos.getX(), pos.getY(), pos.getZ());
 	}
 	
@@ -37,8 +37,8 @@ public class BlockPos {
 		return z;
 	}
 	
-	public net.minecraft.util.BlockPos toPos() {
-		return new net.minecraft.util.BlockPos(x, y, z);
+	public net.minecraft.util.math.BlockPos toPos() {
+		return new net.minecraft.util.math.BlockPos(x, y, z);
 	}
 	
 	public String toString() {

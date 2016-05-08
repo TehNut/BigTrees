@@ -13,11 +13,11 @@ public class DeadTreeDefaults extends TreeConfiguration {
 		name = "Dead Tree";
 		minHeight = 13;
 		maxHeight = 28;
-		wood = new BlockAndMeta(Blocks.log, 0);
-		leaf = new BlockAndMeta(Blocks.leaves, 0);
+		wood = new BlockAndMeta(Blocks.LOG, 0);
+		leaf = new BlockAndMeta(Blocks.LEAVES, 0);
 		baseBlocks = new ArrayList<BlockAndMeta>();
-		baseBlocks.add(new BlockAndMeta(Blocks.grass));
-		baseBlocks.add(new BlockAndMeta(Blocks.sand));
+		baseBlocks.add(new BlockAndMeta(Blocks.GRASS));
+		baseBlocks.add(new BlockAndMeta(Blocks.SAND));
 		minNoiseValue = 0;
 		maxNoiseValue = 60;
 	}

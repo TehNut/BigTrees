@@ -1,10 +1,12 @@
 /.gradle
+/.idea
 /.classpath
 /.project
 /build/
 *~
 /.settings
 /bin/
+/run/
 /config/
 /logs/
 /options.txt

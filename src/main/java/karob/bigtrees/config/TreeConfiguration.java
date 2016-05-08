@@ -70,8 +70,8 @@ public class TreeConfiguration {
 	public TreeConfiguration() {
 		minStunt = 7;
 		baseBlocks = new ArrayList<BlockAndMeta>();
-		baseBlocks.add(new BlockAndMeta(Blocks.grass));
-		baseBlocks.add(new BlockAndMeta(Blocks.dirt));
+		baseBlocks.add(new BlockAndMeta(Blocks.GRASS));
+		baseBlocks.add(new BlockAndMeta(Blocks.DIRT));
 		hasNoiseField = true;
 	}
 	

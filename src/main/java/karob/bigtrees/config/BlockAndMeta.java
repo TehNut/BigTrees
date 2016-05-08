@@ -36,7 +36,7 @@ public class BlockAndMeta {
 	}
 	
 	public boolean isAir() {
-		return block == Blocks.air;
+		return block == Blocks.AIR;
 	}
 	
 	public BlockAndMeta(Block block) {

@@ -11,8 +11,8 @@ public class TallOakTreeDefaults extends TreeConfiguration {
 		name = "Tall Oak";
 		minHeight = 13;
 		maxHeight = 28;
-		wood = new BlockAndMeta(Blocks.log, 0);
-		leaf = new BlockAndMeta(Blocks.leaves, 0);
+		wood = new BlockAndMeta(Blocks.LOG, 0);
+		leaf = new BlockAndMeta(Blocks.LEAVES, 0);
 		minNoiseValue = 0;
 		maxNoiseValue = 40;
 		

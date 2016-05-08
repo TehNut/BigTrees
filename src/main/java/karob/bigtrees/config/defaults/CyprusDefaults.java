@@ -12,8 +12,8 @@ public class CyprusDefaults extends TreeConfiguration {
 		name = "Cyprus Oak";
 		minHeight = 28;
 		maxHeight = 32;
-		wood = new BlockAndMeta(Blocks.log, 1);
-		leaf = new BlockAndMeta(Blocks.leaves, 1);
+		wood = new BlockAndMeta(Blocks.LOG, 1);
+		leaf = new BlockAndMeta(Blocks.LEAVES, 1);
 		minNoiseValue = 0;
 		maxNoiseValue = 90;
 	}
